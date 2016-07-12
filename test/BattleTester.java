@@ -15,6 +15,7 @@ import java.io.BufferedInputStream;
  */
 public class BattleTester {
     
+	
         static BattleQueue que = new BattleQueue();
         static Party heroes = new Party(true);
         static Party enemies = new Party();
@@ -40,13 +41,13 @@ public class BattleTester {
         enemies.add(serp2);
         enemies.add(wendigo);
         
-        heroes.index(0).atb().setRate(100);
-        heroes.index(1).atb().setRate(200);
-        heroes.index(2).atb().setRate(500);
+        heroes.index(0).atb().setRate(25);
+        heroes.index(1).atb().setRate(33);
+        heroes.index(2).atb().setRate(29);
         
-        enemies.index(0).atb().setRate(100);
-        enemies.index(1).atb().setRate(200);
-        enemies.index(2).atb().setRate(500);
+        enemies.index(0).atb().setRate(21);
+        enemies.index(1).atb().setRate(43);
+        enemies.index(2).atb().setRate(32);
         
         control =  new BattleControl(que, heroes.getActive(), enemies.getActive());
         
