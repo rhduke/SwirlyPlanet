@@ -11,7 +11,7 @@ import java.util.Random;
  * @author Ron
  */
 public class ATB {
-    public static final int MAX_ATB = 1000;
+    public static final int MAX_ATB = 200;
     public static final int START_RATE = 10;
     
     private float atb;
@@ -68,6 +68,6 @@ public class ATB {
     }
     
     public String shortString() {
-        return "[" + this.atb + "atb]";
+        return "" + this.atb;
     }
 }

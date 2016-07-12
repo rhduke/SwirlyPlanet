@@ -32,11 +32,11 @@ public class BattleControl {
         this.battlemode = false;
         this.log = new BattleLog(que, hero, enemy);
         
-        all = new Party();
+        this.all = new Party();
         for (int i = 0; i < hero.size(); i++)
-            all.add(hero.index(i));
+            this.all.add(hero.index(i));
         for (int i = 0; i < enemy.size(); i++)
-            all.add(enemy.index(i));
+            this.all.add(enemy.index(i));
     }
     
     public void start() {
@@ -48,11 +48,11 @@ public class BattleControl {
             increaseATB();
             this.log.printScreen();
             
-//            try {
-//                TimeUnit.MILLISECONDS.sleep(3000);
-//            } catch (InterruptedException e) {
-//                //Handle exception
-//            }
+            try {
+                TimeUnit.MILLISECONDS.sleep(500);
+            } catch (InterruptedException e) {
+                //Handle exception
+            }
         }
     }
     
@@ -92,5 +92,8 @@ public class BattleControl {
     private void increaseATB() {
         hero.increaseATB();
         enemy.increaseATB();
+        for (int i = 0; i < all.size(); i++) {
+        	this.log.updateATB(i);
+        }
     }
 }

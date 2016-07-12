@@ -50,6 +50,10 @@ public class Unit {
         return this.name;
     }
     
+    public int hp() {
+    	return this.hp;
+    }
+    
     public boolean isDefault() {
         return this.name.equals(NO_NAME);
     }
